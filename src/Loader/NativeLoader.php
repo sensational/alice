@@ -633,7 +633,7 @@ class NativeLoader implements FilesLoaderInterface, FileLoaderInterface, DataLoa
         return new CallProcessorRegistry([
             new ConfiguratorMethodCallProcessor(),
             new MethodCallWithReferenceProcessor(),
-            new OptionalMethodCallProcessor(),
+            new OptionalMethodCallProcessor($this->fakerGenerator),
             new SimpleMethodCallProcessor(),
         ]);
     }
